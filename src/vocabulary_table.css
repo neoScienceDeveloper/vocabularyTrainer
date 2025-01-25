@@ -1,0 +1,56 @@
+.vocabulary-table {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background: #007AFF;
+    color: white;
+    font-weight: bold;
+}
+
+.styled-table tr:hover {
+    background: #e0f0ff; /* Subtler Hover-Effekt */
+    cursor: pointer;
+}
+
+.styled-table tr:last-child td {
+    border-bottom: none;
+}
+
+.clickable-row {
+    transition: background-color 0.3s ease;
+}
+
+.clickable-row:hover {
+    background-color: #e6f7ff;
+}
