@@ -14,3 +14,23 @@
     font-weight: bold;
     color: #333;
 }
+
+.mode-button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background var(--transition-duration), transform var(--transition-duration), box-shadow var(--transition-duration);
+    margin: var(--spacing-small);
+}
+
+.mode-button:hover {
+    background: #0073e6; /* etwas dunkler für Hover */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}

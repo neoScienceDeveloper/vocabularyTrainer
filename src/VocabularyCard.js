@@ -1,17 +1,28 @@
 import React from "react";
+import { useSwipeable } from "react-swipeable";
 import "./vocabulary_card.css";
 
 function VocabularyCard({ word, onNext, onPrev, onBack }) {
+    // Swipeable handlers außerhalb von Bedingungen deklarieren
+    const handlers = useSwipeable({
+        onSwipedLeft: () => onNext(), // Wischen nach links = nächste Karte
+        onSwipedRight: () => onPrev(), // Wischen nach rechts = vorherige Karte
+        preventScrollOnSwipe: true,
+        trackMouse: true, // Optional: ermöglicht Testen mit Maus
+    });
+
     if (!word) {
         return <p>Loading...</p>;
     }
 
     const safeSplit = (value, delimiter) => {
-        return typeof value === "string" && value.trim() ? value.split(delimiter).map(item => item.trim()) : [];
+        return typeof value === "string" && value.trim()
+            ? value.split(delimiter).map((item) => item.trim())
+            : [];
     };
 
     return (
-        <div className="vocabulary-card">
+        <div className="vocabulary-card" {...handlers}>
             {/* Header mit Zurück-Button */}
             <div className="card-header">
                 <button className="back-button" onClick={onBack}>

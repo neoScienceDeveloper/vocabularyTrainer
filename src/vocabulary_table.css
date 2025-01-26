@@ -26,20 +26,32 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+/* Standardzellen */
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
 }
 
+/* Erste Spalte: kleinere Schriftgröße */
+.styled-table td:first-child,
+.styled-table th:first-child {
+    font-size: 0.8rem; /* Schriftgröße kleiner */
+    color: #555; /* Optionale Farbänderung */
+    text-align: center; /* Optionale Zentrierung */
+    width: 50px; /* Optionale Breite */
+}
+
+/* Kopfzeile */
 .styled-table th {
     background: #007AFF;
     color: white;
     font-weight: bold;
 }
 
+/* Hover-Effekt für reguläre Zeilen */
 .styled-table tr:hover {
-    background: #e0f0ff; /* Subtler Hover-Effekt */
+    background: #e0f0ff;
     cursor: pointer;
 }
 
@@ -51,6 +63,60 @@
     transition: background-color 0.3s ease;
 }
 
-.clickable-row:hover {
-    background-color: #e6f7ff;
+/* Suchfeld */
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+/* Zusätzliche Zeile, die beim Hovern erscheint */
+.hover-row {
+    background-color: #ffffff; /* oder #f8f8f8, wie du magst */
+}
+
+.hover-row td {
+    border-bottom: 1px solid #ddd; /* Ggf. noch ein Rahmen */
+}
+
+/* Container für die Zusatzinfos */
+.hover-details {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Kleine Unterbereiche, um Infos etwas zu trennen */
+.hover-detail-block {
+    margin-bottom: 1rem;
+}
+
+.hover-detail-block h4 {
+    margin: 0 0 0.5rem;
+    color: #007aff;
+}
+
+.hover-row {
+    background-color: #fff;
+}
+.hover-row td {
+    /* evtl. kein Rand unten, damit es mit der Card verschmilzt */
+    border-bottom: none;
 }
